@@ -11,4 +11,4 @@ Du kan starte en bot ved at køre `node <fil>`.  Eksempel: `node matbot.js`
 
 | Bot | Beskrivelse |
 | --- | ----------- |
-| [`matbot.js`](matbot.js) | Udregner simple regnestykker. |
+| [`matbot`](matbot.js) | Udregner simple regnestykker. |
