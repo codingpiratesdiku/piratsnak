@@ -1,5 +1,12 @@
-const host = 'localhost';
-const port = 50008;
+var host = 'localhost';
+var port = 50008;
+
+if (process.argv.length >= 3) {
+  host = process.argv[2];
+}
+if (process.argv.length >= 4) {
+  port = parseInt(process.argv[3]);
+}
 
 const botName = 'matbot';
 const safetyRegexp = /^[0-9 .+\-*/()]+$/;

@@ -68,7 +68,13 @@ public class Program {
         }
     }
 
-    public static async Task Main() {
-        await ConnectAndLoop(Host, Port);
+    public static async Task Main(string[] args) {
+        var host = args.Length >= 1
+            ? args[0]
+            : Host;
+        var port = args.Length >= 2
+            ? Int32.Parse(args[1])
+            : Port;
+        await ConnectAndLoop(host, port);
     }
 }

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import socket
 import selectors
 import threading
@@ -205,6 +206,11 @@ def random_name():
         return random.choice(f.read().strip().split('\n'))
 
 if __name__ == '__main__':
+    args = sys.argv[1:]
+    if len(args) >= 1:
+        host = args[0]
+    if len(args) >= 2:
+        port = int(args[1])
     client = Client(server=host, port=port, max_history=100, name=random_name())
     try:
         client.connect()

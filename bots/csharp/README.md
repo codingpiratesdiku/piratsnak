@@ -12,6 +12,11 @@ cd pokebot
 dotnet run
 ```
 
+Hvis du vil forbinde til en speciel server (for eksempel din egen eller
+en vens), kan du køre `dotnet run -- <adresse>`, for eksempel `dotnet
+run -- localhost` hvis du kører en server selv, eller `dotnet run --
+1.2.3.4` hvis du ved at der kører en server på IP-adressen 1.2.3.4.
+
 
 ## Liste over bots
 

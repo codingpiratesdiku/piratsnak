@@ -24,3 +24,9 @@ Resten af tiden kan du nøjes med at køre:
 . .venv/bin/activate
 python klient.py
 ```
+
+Hvis du vil forbinde til en speciel server (for eksempel din egen eller
+en vens), kan du køre `python klient.py <adresse>`, for eksempel `python
+klient.py localhost` hvis du kører en server selv, eller `python
+klient.py 1.2.3.4` hvis du ved at der kører en server på IP-adressen
+1.2.3.4.
