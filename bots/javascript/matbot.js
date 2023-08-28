@@ -1,4 +1,4 @@
-var host = 'localhost';
+var host = 'udsigtspunkt.dk';
 var port = 50008;
 
 if (process.argv.length >= 3) {

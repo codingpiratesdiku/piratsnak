@@ -10,7 +10,7 @@ from typing import Callable
 
 import urwid
 
-host = 'localhost'
+host = 'udsigtspunkt.dk'
 port = 50008
 
 cat_info = '[INFO]'

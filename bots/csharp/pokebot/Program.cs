@@ -7,7 +7,7 @@ using System.Text.Json.Nodes;
 
 public class Program {
     private const string BotName = "pokebot";
-    private const string Host = "localhost";
+    private const string Host = "udsigtspunkt.dk";
     private const int Port = 50008;
 
     private static readonly HttpClient HttpClient = new HttpClient();
