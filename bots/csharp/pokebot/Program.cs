@@ -34,7 +34,11 @@ public class Program {
 
     private static async Task ConnectAndLoop(string host, int port) {
         var ipHostInfo = await Dns.GetHostEntryAsync(host);
-        var ipAddress = ipHostInfo.AddressList[1];
+        var ipAddress = Array.Find(ipHostInfo.AddressList,
+                                   a => a.AddressFamily == AddressFamily.InterNetwork);
+        if (ipAddress == null) {
+            throw new Exception("No usable address could be resolved.");
+        }
         var ipEndPoint = new IPEndPoint(ipAddress, port);
         using var client = new Socket(
             ipEndPoint.AddressFamily,
