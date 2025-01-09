@@ -7,6 +7,7 @@ import threading
 import os.path
 import random
 from typing import Callable
+from typing import List
 
 import urwid
 
@@ -107,7 +108,7 @@ class ClientInterface:
     def run(self):
         self.urwid_loop.run()
 
-    def set_messages(self, messages: list[str]):
+    def set_messages(self, messages: List[str]):
         markups = []
         for message in messages:
             markups.append('\n')
